@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+   <head>
+      <title>Bike Sharing Prediction</title>
+   </head>
+   <body>
+      {% with messages = get_flashed_messages() %}
+         {% if messages %}
+            <ul>
+               {% for message in messages %}
+               <li<{{ message }}</li>
+               {% endfor %}
+            </ul>
+         {% endif %}
+      {% endwith %}
+
+      <h1>Bike Sharing Prediction</h1>
+      <p>Do you want to <a href = "{{ url_for('train_and_persist') }}">
+         <b>train_and_persist?</b></a></p>
+      <p>Do you want to <a href = "{{ url_for('predict') }}">
+        <b>predict without parameters?</b></a></p>
+   </body>
+</html>

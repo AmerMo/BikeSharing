@@ -13,7 +13,6 @@ from datetime import timedelta
 class CustException(Exception):
     pass
 
-
 class APIException(CustException):
     def __init__(self, status=None, title=None, type=None, detail=None, **kwargs):
         super(AIVException, self).__init__(detail)
